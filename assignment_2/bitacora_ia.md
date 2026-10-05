@@ -3,9 +3,9 @@
 ## 1. ¿Qué le pidieron a la IA?
 **a)** Le pedí que me ayudara a crear los issues siguiendo las indicaciones del mismo issue de la tarea.
 
-**b)** Le pedí que me ayudara a armar la tabla de documentos obtenidos del scraping en gob.pe, con columnas mes, numero, fecha, titulo y enlace, usando ChatGPT.
+**b)** Que arme la tabla de documentos obtenidos del scraping en gob.pe, siguiendo las indicaciones del issue.
 
-**c)** Le pedí que me ayudara a armar la función para geocodificar las capitales con la API de Open-Meteo, usando ChatGPT.
+**c)** Que me ayudara a armar la función para geocodificar las capitales con la API de Open-Meteo.
 
 ## 2. ¿Qué les respondió? (copien la parte relevante)
 **a)** "Incluí un enlace al issue de la clase en la descripción de cada uno de los cuatro issues."
