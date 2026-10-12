@@ -135,6 +135,11 @@ st.markdown(
     "¿Los departamentos donde más llovió fueron los que recibieron declaratorias "
     "de emergencia? Usa los filtros de la izquierda para explorar."
 )
+st.caption(
+    "Período: 1 de enero al 31 de mayo de 2022. "
+    "La precipitación corresponde a las capitales departamentales, "
+    "no al promedio de cada departamento."
+)
 
 if filtrado.empty:
     st.warning("Ningún departamento cumple los filtros. Amplía el rango o la selección.")
@@ -192,7 +197,8 @@ with tab_ranking:
         title=titulo_ranking(filtrado),
         height=max(350, 28 * len(ordenado)),
     )
-    fig_barras.update_traces(texttemplate="%{text:,.0f}", textposition="outside")
+    formato_barras = "%{text:,.1f}" if variable == "lluvia_total_mm" else "%{text:,.0f}"
+    fig_barras.update_traces(texttemplate=formato_barras, textposition="outside")
     fig_barras.update_layout(yaxis={"categoryorder": "total ascending"}, legend_title_text="")
     st.plotly_chart(fig_barras, width="stretch")
     st.caption(FUENTE)
@@ -242,7 +248,7 @@ with tab_mapa:
     with st.expander("Reporte del cruce dataset ↔ GeoJSON"):
         st.write(f"Departamentos en el dataset: **{len(df)}** · en el GeoJSON: **{len(geo['features'])}**")
         if not sin_datos and not sin_geometria:
-            st.success("Todos los departamentos cruzaron por ubigeo.")
+            st.success("Las 25 geometrías tienen ubigeo y datos asociados.")
         if sin_geometria:
             st.warning(f"Sin geometría en el GeoJSON: {', '.join(sin_geometria)}")
         if sin_datos:
