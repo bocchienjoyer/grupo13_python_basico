@@ -6,7 +6,7 @@
 
 **Datos:** opción B, tabla final de lluvias y decretos de emergencia por departamento (`datos/dataset.csv`, copia de `assignment_2/datos/tabla_final.csv`).
 
-**Dashboard público:** pendiente de despliegue en Streamlit Community Cloud. Agregar el enlace cuando esté publicado.
+**Dashboard público:** https://grupo13pythonbasico-3ukvbgtoqddwaphhxsnx9s.streamlit.app/ (verificado en incógnito; los filtros responden correctamente).
 
 ## Contenido de la carpeta
 
