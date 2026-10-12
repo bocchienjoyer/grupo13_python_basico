@@ -143,6 +143,12 @@ st.caption(
 
 if filtrado.empty:
     st.warning("Ningún departamento cumple los filtros. Amplía el rango o la selección.")
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Departamentos mostrados", f"0 de {len(df)}")
+    c2.metric("Declaratorias de emergencia", "0")
+    c3.metric("Lluvia promedio", "—")
+    c4.metric("Días de lluvia fuerte (total)", "0")
+    st.info("Los gráficos, el mapa y la tabla están vacíos porque el filtro no dejó resultados.")
     st.stop()
 
 c1, c2, c3, c4 = st.columns(4)
